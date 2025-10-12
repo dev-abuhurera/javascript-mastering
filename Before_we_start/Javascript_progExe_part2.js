@@ -66,9 +66,9 @@
 
                                                                                                 [[[[[[[[ Call Stack ]]]]]]]]
 
---------->>> Call stack is to manage the exection contexts ----->> Main Execution context exit in the stack and whenever a new funciton is invoked a new call stack is created and thus the Stack Execution will be created inside the call stack and when the program is finished the whole execution stack is removed from the memory
+--------->>> Call stack is to manage the exection contexts ----->> Main Execution context exit in the stack and whenever a new funciton is invoked a new exection context is created and thus the Stack Execution will be created inside the call stack and when the program is finished the whole execution stack is removed from the memory
 
-    -- Call Stack also maintain the order of execution of the execution context
+                                                                            -- Call Stack also maintain the order of execution of the execution context
 
 
 
