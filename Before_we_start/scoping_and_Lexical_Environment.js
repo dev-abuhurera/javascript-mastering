@@ -99,7 +99,75 @@ w();
 
 
 
+/*
+
+
+                                                            What is the scope ?????
+
+                                            Scope is some where we access a specific variable and function  ----------------------((((1))))                                                
+
+
+                            ----->> 'SCOPE IS DIRECTLY DEPENDANT ON THE LEXICAL ENVIRONMENT'
+
+    
+        1. Lexical means in heriarchyyy --------(1)
+
+
+       ---->> Lexical ------>>> in heriarchy with parents 
+
+       like when an execution context is created it has a referance to its parent memory --->> So it is the lexical to its parent memory
+
+
+    
+    for eg:-
+
+
+    function w(){
+
+            q = 100;
+
+
+            r();
+            
+            function r(){
+                
+            }
+
+    ----->>> Now the function 'r' --->> It is inside the function 'w' ----->>> So it can be said that the (((r))) is lexical to (((w))) right.......
+
+    It means it exist in the memory space of this function 
+
+    So, when if i try t0 --->> Log out the value of variable in the function --->>> js engine check the memory space of the LEC of the funciton ---->> If it don't get this in it ----->> the execution context will be moving to the lexical parent where the fuction existed
+
+    Then the global Execution Context ---->> And then if the variable is not there --->>> It will be moving to the Null
+
+    (THen it will say that the variable is not defined )
 
 
 
+So, this is the                                                                 [[[[[[[[SCOPE CHAINING]]]]]]
+
+                                                                             The chain of the lexical environment 
+
+
+                                                                 ''' Lexical Environment is the local memory + lexical Parent '''
+
+
+}
+
+    console.log(q); 
+
+    w();
+
+
+
+
+
+
+
+
+
+
+
+*/
 
