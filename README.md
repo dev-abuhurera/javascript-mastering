@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./js-logo.png" alt="JavaScript Logo" width="150" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="100" />
 </p>
 
 <h1 align="center">⚡ JavaScript Mastering ⚡</h1>
