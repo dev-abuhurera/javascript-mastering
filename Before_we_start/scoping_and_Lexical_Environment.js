@@ -141,7 +141,7 @@ w();
 
     Then the global Execution Context ---->> And then if the variable is not there --->>> It will be moving to the Null
 
-    (THen it will say that the variable is not defined )
+    (Then it will say that the variable is not defined )
 
 
 
