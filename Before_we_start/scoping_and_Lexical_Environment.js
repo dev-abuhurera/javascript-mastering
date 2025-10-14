@@ -1,6 +1,7 @@
 // Lexical Environment 
 
 
+
 function a(){
     console.log(b);
 }
@@ -39,18 +40,18 @@ c();
 
 /*
 
-        --->>>                               ''So what will happen inside this now''
+                            --->>>                           ''So what will happen inside this now''
 
 
                                     Now i want to make this complex that what if i have a function inside the function then what is gonna be printed 
 
 
 
-                            And here it goes --->> Again the output is shown at the console screen......
+                                            And here it goes --->> Again the output is shown at the console screen......
 
 
 
-                        Now let me show you the whole concepts here ----->>>>
+                                                Now let me show you the whole concepts here ----->>>>
 
 */
 
@@ -102,12 +103,13 @@ w();
 /*
 
 
-                                                            What is the scope ?????
+                                                                What is the scope ?????
 
-                                            Scope is some where we access a specific variable and function  ----------------------((((1))))                                                
+                ---------------------------  Scope is some where we access a Specific Variable and Function  ----------------------((((1))))                                                
 
 
-                            ----->> 'SCOPE IS DIRECTLY DEPENDANT ON THE LEXICAL ENVIRONMENT'
+                                      ----->> 'SCOPE IS DIRECTLY DEPENDANT ON THE LEXICAL ENVIRONMENT' <<-----
+
 
     
         1. Lexical means in heriarchyyy --------(1)
@@ -115,7 +117,8 @@ w();
 
        ---->> Lexical ------>>> in heriarchy with parents 
 
-       like when an execution context is created it has a referance to its parent memory --->> So it is the lexical to its parent memory
+
+       Like when an execution context is created it has a referance to its parent memory --->> So it is the lexical to its parent memory
 
 
     
@@ -133,41 +136,42 @@ w();
                 
             }
 
+
+
     ----->>> Now the function 'r' --->> It is inside the function 'w' ----->>> So it can be said that the (((r))) is lexical to (((w))) right.......
 
-    It means it exist in the memory space of this function 
-
-    So, when if i try t0 --->> Log out the value of variable in the function --->>> js engine check the memory space of the LEC of the funciton ---->> If it don't get this in it ----->> the execution context will be moving to the lexical parent where the fuction existed
-
-    Then the global Execution Context ---->> And then if the variable is not there --->>> It will be moving to the Null
-
-    (Then it will say that the variable is not defined )
 
 
 
-So, this is the                                                                 [[[[[[[[SCOPE CHAINING]]]]]]
 
-                                                                             The chain of the lexical environment 
-
-
-                                                                 ''' Lexical Environment is the local memory + lexical Parent '''
+                    It means it exist in the memory space of this function 
 
 
-}
+                    So, when if i try t0 --->> Log out the value of variable in the function --->>> js engine check the memory space of the LEC of the funciton ---->> If it don't get this in it ----->> the execution context will be moving to the lexical parent where the fuction existed
+
+
+                    Then the global Execution Context ---->> And then if the variable is not there --->>> It will be moving to the Null
+
+                
+                    (  Then it will say that the variable is not defined  )
+
+
+
+                                                                                [[[[[[[[SCOPE CHAINING]]]]]]]
+
+                                                                            The chain of the lexical environment 
+
+
+                                                            '''  Lexical Environment is the local memory + lexical Parent   '''
+                                                            
+    }
 
     console.log(q); 
 
     w();
 
-
-
-
-
-
-
-
-
-
-
 */
+
+
+
 
