@@ -44,16 +44,24 @@ Every note aims to make the **why** behind the behavior of JavaScript crystal cl
 
 Here’s what I’ve learned and documented till now 👇
 
+## 🧠 Core JavaScript Concepts
+
 | Concept | Description |
 |----------|--------------|
-| 🧱 **Hoisting** | How declarations are processed before execution. |
-| 🌍 **Global Execution Context** | The starting point of all JavaScript programs. |
-| 🧭 **Lexical Environment** | How scope is defined when code is written. |
-| 🔄 **Closures** | How functions remember variables even after their parent scope is gone. |
-| 🧵 **Call Stack** | The structure managing execution order in JavaScript. |
-| 💾 **Memory Allocation** | What happens before execution actually starts. |
-| 🔗 **Scope Chaining** | How JavaScript finds variables up the chain. |
-| 🧍‍♂️ **`this` Keyword** | Understanding how its value changes depending on context. |
+| 🧱 **Hoisting** | How declarations are processed before execution, allowing access to variables and functions before they appear in code. |
+| ⚡ **Temporal Dead Zone (TDZ)** | The period between entering a scope and the actual declaration of a `let` or `const` variable — accessing it here throws a `ReferenceError`. |
+| 🧩 **`let` and `const` Hoisting** | These are hoisted but **not initialized** until their declaration line is reached, unlike `var`. |
+| 🌍 **Global Execution Context** | The default environment where all JavaScript code begins execution. |
+| 🧭 **Lexical Environment** | Defines where variables and functions are accessible based on where they are **physically written** in the code. |
+| 🔄 **Closures** | When a function “remembers” variables from its outer scope even after that scope has finished execution. |
+| 🧵 **Call Stack** | A stack-like structure that keeps track of which function is currently running and which one to return to next. |
+| 💾 **Memory Allocation** | Happens during the **creation phase** — variables and functions are set up before code runs. |
+| 🔗 **Scope Chaining** | The process of searching variables upward through nested scopes until the global scope. |
+| 🧍‍♂️ **`this` Keyword** | Refers to the object that is currently executing the function; its value depends on how the function is called. |
+| 🧱 **Block Scoping** | Variables declared with `let` and `const` are limited to the block `{}` in which they are defined. |
+| 🕶️ **Shadowing** | When a variable in a local scope has the same name as one in an outer scope, temporarily hiding (or “shadowing”) it. |
+| 🚫 **TypeError, SyntaxError, and ReferenceError** | Common JavaScript errors — `TypeError` for invalid operations on data types, `SyntaxError` for invalid code structure, and `ReferenceError` for using undeclared variables. |
+
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="100" />
