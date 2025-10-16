@@ -339,12 +339,6 @@ If this repository helps you master JavaScript:
 
 ---
 
-## 📝 License
-
-This repository is open source under the [MIT License](LICENSE).
-
----
-
 ## 🙋 About the Author
 
 **Abuhurera**
@@ -367,6 +361,5 @@ _"Writing code is easy. Understanding what happens behind the scenes — that's 
 ╚════════════════════════════════════════╝
 ```
 
-[⬆ Back to Top](#-mastering-javascript--the-deep-dive-)
 
 </div>
