@@ -46,6 +46,8 @@ Here’s what I’ve learned and documented till now 👇
 
 ## 🧠 Core JavaScript Concepts
 
+## 🧠 Core JavaScript Concepts
+
 | Concept | Description |
 |----------|--------------|
 | 🧱 **Hoisting** | How declarations are processed before execution, allowing access to variables and functions before they appear in code. |
@@ -53,6 +55,7 @@ Here’s what I’ve learned and documented till now 👇
 | 🧩 **`let` and `const` Hoisting** | These are hoisted but **not initialized** until their declaration line is reached, unlike `var`. |
 | 🌍 **Global Execution Context** | The default environment where all JavaScript code begins execution. |
 | 🧭 **Lexical Environment** | Defines where variables and functions are accessible based on where they are **physically written** in the code. |
+| 🧩 **Lexical Block Scoping** | A combination of lexical scoping and block-level scope; variables defined with `let` or `const` inside a block are accessible only within that block and determined by where they are written in the code. |
 | 🔄 **Closures** | When a function “remembers” variables from its outer scope even after that scope has finished execution. |
 | 🧵 **Call Stack** | A stack-like structure that keeps track of which function is currently running and which one to return to next. |
 | 💾 **Memory Allocation** | Happens during the **creation phase** — variables and functions are set up before code runs. |
@@ -61,6 +64,7 @@ Here’s what I’ve learned and documented till now 👇
 | 🧱 **Block Scoping** | Variables declared with `let` and `const` are limited to the block `{}` in which they are defined. |
 | 🕶️ **Shadowing** | When a variable in a local scope has the same name as one in an outer scope, temporarily hiding (or “shadowing”) it. |
 | 🚫 **TypeError, SyntaxError, and ReferenceError** | Common JavaScript errors — `TypeError` for invalid operations on data types, `SyntaxError` for invalid code structure, and `ReferenceError` for using undeclared variables. |
+
 
 
 <p align="center">
