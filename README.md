@@ -2,15 +2,17 @@
 
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="120" alt="JavaScript Logo" style="margin: 20px 0;"/>
+
 **_"Not just writing JavaScript — understanding how it thinks."_**
 
 [![JavaScript](https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Status](https://img.shields.io/badge/Status-In%20Progress-0077B6?style=for-the-badge)](https://github.com)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-A comprehensive, evolving guide to **mastering JavaScript's core mechanics** — from execution context to async patterns.
+A comprehensive, evolving guide to **mastering JavaScript's core mechanics** — from execution context to async patterns with practical examples.
 
-[🎯 Get Started](#-learning-flow-overview) • [📚 Topics](#-core-concepts) • [🗂️ Structure](#-repository-structure) • [🚀 Roadmap](#-learning-roadmap)
+[🎯 Get Started](#-quick-start) • [📚 Topics](#-core-javascript-concepts) • [🗂️ Structure](#-repository-structure) • [🚀 Roadmap](#-learning-roadmap)
 
 </div>
 
@@ -21,10 +23,11 @@ A comprehensive, evolving guide to **mastering JavaScript's core mechanics** —
 This is a **personal learning journey** toward truly mastering JavaScript — not just syntax, but the fundamental mechanics that power every line of code.
 
 Rather than scattered documentation, this repository contains:
+- **Detailed concept files** explaining core JavaScript mechanics
+- **Practical JavaScript programs** demonstrating real-world applications
 - **Visual breakdowns** of complex concepts
-- **Conceptual maps** showing how ideas interconnect
+- **Step-by-step examples** you can run and experiment with
 - **Personal notes** in accessible, intuitive language
-- **Real-world examples** demonstrating core principles
 
 > 💡 _"I'm continuously updating this repo as I uncover new layers of JavaScript. This isn't a finished product — it's a living document."_
 
@@ -35,141 +38,126 @@ Rather than scattered documentation, this repository contains:
 Here's how JavaScript concepts build upon each other — from fundamentals to advanced patterns:
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                                                                 │
-│  🔥 Execution Context                                           │
-│         ↓                                                       │
-│  🧠 Memory Creation Phase (Hoisting)                           │
-│         ↓                                                       │
-│  ⚡ Temporal Dead Zone & Variable Declarations                 │
-│         ↓                                                       │
-│  🌍 Global vs Function vs Block Scope                          │
-│         ↓                                                       │
-│  🧩 Lexical Environment & Scope Chain                          │
-│         ↓                                                       │
-│  🔗 Closures (Variables in Memory)                             │
-│         ↓                                                       │
-│  🧵 Call Stack & Function Execution Order                      │
-│         ↓                                                       │
-│  ⏳ Event Loop & Callback Queue                                │
-│         ↓                                                       │
-│  🌊 Promises, Async/Await & Microtask Queue                   │
-│         ↓                                                       │
-│  🧬 Prototypes, this, & Inheritance                           │
-│         ↓                                                       │
-│  📦 Modules, Patterns & Best Practices                        │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│                                                              │
+│  🔥 Execution Context & How Code is Executed               │
+│         ↓                                                   │
+│  🧠 Memory Creation Phase & Hoisting                       │
+│         ↓                                                   │
+│  ⚡ Temporal Dead Zone & Variable Declarations             │
+│         ↓                                                   │
+│  🌍 Block Scoping & Shadowing                              │
+│         ↓                                                   │
+│  🧩 Lexical Environment & Scope Chain                      │
+│         ↓                                                   │
+│  🔗 Closures (Variables in Memory)                         │
+│         ↓                                                   │
+│  🖐️ Function Invocation & Variable Environments           │
+│         ↓                                                   │
+│  🖐️ The `this` Keyword & Context Binding                  │
+│         ↓                                                   │
+│  📊 Language Essentials (Types, Data)                      │
+│         ↓                                                   │
+│  🎯 Practical Programs & Real-World Applications           │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🧱 Core Concepts
+## 🧱 Core JavaScript Concepts
 
-| Concept | Symbol | Description |
-|---------|--------|-------------|
-| **Hoisting** | 🧱 | Declarations are processed before execution, making them accessible before they appear in code |
-| **Temporal Dead Zone** | ⚡ | The "no-access" zone before a `let` or `const` variable is initialized |
-| **Execution Context** | 🔥 | The environment where code executes — created fresh for every function call |
-| **Memory Phase** | 🧠 | Pre-execution phase where variables and functions are allocated in memory |
-| **Scope** | 🌍 | Determines where variables are accessible — influenced by function and block boundaries |
-| **Lexical Environment** | 🧭 | The structure that defines variable accessibility based on where code is written |
-| **Scope Chain** | 🔗 | JavaScript's mechanism for searching variables through nested scopes |
-| **Closures** | 🔐 | Functions that retain access to outer scope variables even after the outer function completes |
-| **Call Stack** | 📚 | The stack structure that manages function execution order and context |
-| **this Keyword** | 🖐️ | Dynamic reference that depends on how and where a function is called |
-| **Variable Shadowing** | 🕶️ | When an inner scope variable hides an outer scope variable with the same name |
-| **Error Types** | 🚫 | TypeError, ReferenceError, SyntaxError — understanding when and why they occur |
+### Fundamentals
+
+| File | Concept | Symbol | Description |
+|------|---------|--------|-------------|
+| `How_js_code_executed.js` | **Code Execution** | 🔥 | Understanding how JavaScript processes code line by line |
+| `hoisting.js` | **Hoisting** | 🧱 | Variable and function declarations processed before execution |
+| `block_scoping_and_shadowing.js` | **Block Scoping** | 🌍 | How `let` and `const` create block boundaries and variable shadowing |
+| `temporal_dead_zone.js` | **Temporal Dead Zone** | ⚡ | The "no-access" zone before variables are initialized |
+| `undefined_vs_notDefined.js` | **Undefined vs Not Defined** | ❓ | Key differences between undefined values and reference errors |
+| `scoping_and_Lexical_Environment.js` | **Lexical Environment** | 🧭 | Where variables are accessible based on code structure |
+| `closures.js` | **Closures** | 🔐 | Functions retaining access to outer scope variables |
+| `Function_invocation_and_variable_envi...js` | **Function Invocation** | 📞 | How functions are called and their execution context |
+| `Introduction_to_this.js` | **The `this` Keyword** | 🖐️ | Context binding based on function invocation patterns |
+| `Javascript_progExe_part2.js` | **Program Execution** | ⚙️ | Advanced execution patterns and flow control |
+| `LanguageEssentials.js` | **Language Basics** | 📚 | Core language features and built-in behaviors |
+
+---
+
+## 📊 JavaScript Programs
+
+Practical examples applying core concepts to real-world scenarios:
+
+| File | Topic | Difficulty | Description |
+|------|-------|------------|-------------|
+| `01_variables.js` | Variables & Declaration | 🟢 Beginner | Understanding `var`, `let`, and `const` |
+| `02_datatypes.js` | Data Types | 🟢 Beginner | Primitives, Objects, and type coercion |
+| `03_conversionOperation.js` | Type Conversion | 🟡 Intermediate | Explicit and implicit type conversion |
+| `04_datatypeComparison.js` | Comparison Operators | 🟡 Intermediate | Loose vs strict equality and comparisons |
+| `05_Stack_and_heap.js` | Memory Management | 🟡 Intermediate | Stack (primitives) vs Heap (objects) |
+| `06_Strings.js` | String Methods | 🟢 Beginner | String manipulation and built-in methods |
+| `07_Number_and_Math.js` | Numbers & Math | 🟢 Beginner | Number operations and Math object |
+| `08_Data_and_Time.js` | Date & Time | 🟡 Intermediate | Working with Date objects and timestamps |
 
 ---
 
 ## 🔍 Execution Flow Visualization
 
-Here's how JavaScript processes code synchronously and asynchronously:
+Here's how JavaScript processes code synchronously:
 
 ```
-╔════════════════════════════════════════════════════════════════════╗
-║                   JAVASCRIPT EXECUTION MODEL                       ║
-╠════════════════════════════════════════════════════════════════════╣
-║                                                                    ║
-║  PHASE 1: CREATION (Before Execution)                            ║
-║  ───────────────────────────────────────                          ║
-║  • Global Execution Context created                              ║
-║  • Memory allocated for variables and functions                  ║
-║  • Variables set to 'undefined', functions fully hoisted         ║
-║                                                                    ║
-║  PHASE 2: EXECUTION (Line by Line)                               ║
-║  ─────────────────────────────────────                            ║
-║  • Code runs top-to-bottom                                       ║
-║  • Synchronous code executes immediately                         ║
-║  • Async code sent to Web APIs                                   ║
-║                                                                    ║
-║  PHASE 3: CALLBACK HANDLING (After Stack Clears)                 ║
-║  ────────────────────────────────────────────────                 ║
-║  • Event Loop monitors Call Stack                                ║
-║  • Microtasks (Promises) execute first                           ║
-║  • Macrotasks (setTimeout) execute next                          ║
-║                                                                    ║
-╚════════════════════════════════════════════════════════════════════╝
-
-        Call Stack (Synchronous)
-             ▲
-             │ function calls
-             │ push & pop
-             │
-    ┌────────┴─────────┐
-    │                  │
-    │                  ▼
-    │            Web APIs
-    │     (setTimeout, fetch, etc)
-    │
-    │         ▼
-    │    Microtask Queue    ← Promises, queueMicrotask
-    │    Macrotask Queue    ← setTimeout, setInterval
-    │
-    └──── Event Loop ────────
-         (continuously checks)
+╔═══════════════════════════════════════════════════════════════╗
+║              JAVASCRIPT EXECUTION PHASES                      ║
+╠═══════════════════════════════════════════════════════════════╣
+║                                                               ║
+║  PHASE 1: CREATION (Before Execution)                        ║
+║  ─────────────────────────────────────                        ║
+║  ✓ Global Execution Context created                          ║
+║  ✓ Memory allocated for variables & functions               ║
+║  ✓ Variables set to 'undefined' (hoisting)                  ║
+║  ✓ Functions fully hoisted and ready                        ║
+║                                                               ║
+║  PHASE 2: EXECUTION (Line by Line)                          ║
+║  ─────────────────────────────────────                        ║
+║  ✓ Code runs top-to-bottom                                  ║
+║  ✓ Variable assignments happen                              ║
+║  ✓ Functions are invoked                                    ║
+║  ✓ New Execution Contexts created for each function call   ║
+║                                                               ║
+║  PHASE 3: SCOPE CHAIN & LOOKUP                              ║
+║  ────────────────────────────────                            ║
+║  ✓ Variables searched in local scope first                  ║
+║  ✓ Then in parent scopes (Lexical Environment)             ║
+║  ✓ Finally in global scope                                 ║
+║  ✓ ReferenceError if not found anywhere                    ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 📚 Topics & Learning Progress
-
-### ✅ Completed Topics
-
-- **Hoisting** — How variable and function declarations are processed
-- **Scope & Lexical Environment** — Where variables live and how to find them
-- **Closures** — Functions remembering their outer context
-- **Call Stack** — Understanding execution order
-
-### 🔄 In Progress
-
-- **Event Loop & Concurrency** — How JavaScript handles asynchronous code
-- **Promises & Async/Await** — Modern asynchronous patterns
-- **Prototypes & Inheritance** — Object-oriented JavaScript
-
-### 🔜 Coming Soon
-
-- **The `this` Keyword** — Context binding and invocation patterns
-- **Prototypal Chain** — How objects inherit from each other
-- **Design Patterns** — Practical, scalable code structures
-- **Modules & Build Tools** — Organizing large JavaScript projects
-- **Performance Optimization** — Memory management and optimization techniques
-
----
-
-## 📊 Progress Dashboard
+## 📈 Progress Dashboard
 
 ```
-Hoisting                    [████████░░] 90%
-Scope & Lexical Env         [██████████] 100%
-Closures                    [██████████] 100%
-Call Stack                  [████████░░] 85%
-Event Loop                  [██████░░░░] 60%
-Promises & Async/Await      [████░░░░░░] 40%
-Prototypes & Inheritance    [██░░░░░░░░] 20%
-Design Patterns             [░░░░░░░░░░] 0%
-Modules & Best Practices    [░░░░░░░░░░] 0%
+Core Concepts:
+  Execution Context        [██████████] 100%
+  Hoisting                 [██████████] 100%
+  Block Scoping            [██████████] 100%
+  Temporal Dead Zone        [██████████] 100%
+  Lexical Environment       [██████████] 100%
+  Closures                 [██████████] 100%
+  Function Invocation      [██████████] 100%
+  The this Keyword         [██████████] 100%
+  Language Essentials      [██████████] 100%
+
+JavaScript Programs:
+  Variables & Data Types   [██████████] 100%
+  Type Conversion          [██████████] 100%
+  Memory Management        [██████████] 100%
+  String Operations        [██████████] 100%
+  Numbers & Math           [██████████] 100%
+  Date & Time              [██████████] 100%
 ```
 
 ---
@@ -177,127 +165,177 @@ Modules & Best Practices    [░░░░░░░░░░] 0%
 ## 🗂️ Repository Structure
 
 ```
-mastering-javascript/
+JAVASCRIPT-MASTERING
 │
 ├── 📄 README.md (you are here)
 │
-├── 📁 01-Fundamentals/
-│   ├── hoisting.md
-│   ├── execution-context.md
-│   └── memory-allocation.md
+├── 📁 .devcontainer/
+│   └── (Development environment config)
 │
-├── 📁 02-Scope-Closures/
-│   ├── scope-explained.md
-│   ├── lexical-environment.md
-│   ├── scope-chain.md
-│   └── closures.md
+├── 📁 Core JavaScript Concepts/
+│   ├── block_scoping_and_shadowing.js
+│   ├── closures.js
+│   ├── Function_invocation_and_variable_envi....js
+│   ├── hoisting.js
+│   ├── How_js_code_executed.js
+│   ├── Introduction_to_this.js
+│   ├── Javascript_progExe_part2.js
+│   ├── LanguageEssentials.js
+│   ├── scoping_and_Lexical_Environment.js
+│   ├── temporal_dead_zone.js
+│   └── undefined_vs_notDefined.js
 │
-├── 📁 03-Call-Stack/
-│   ├── call-stack-visualization.md
-│   └── execution-order.md
-│
-├── 📁 04-Asynchronous/
-│   ├── event-loop.md
-│   ├── callback-queue.md
-│   ├── promises.md
-│   └── async-await.md
-│
-├── 📁 05-Objects-Prototypes/
-│   ├── this-keyword.md
-│   ├── prototypes.md
-│   └── inheritance.md
-│
-├── 📁 06-Patterns/
-│   ├── design-patterns.md
-│   ├── module-pattern.md
-│   └── best-practices.md
-│
-└── 📁 Examples/
-    ├── practical-examples.js
-    └── interview-questions.md
+└── 📁 JavaScript Programs/
+    ├── 01_variables.js
+    ├── 02_datatypes.js
+    ├── 03_conversionOperation.js
+    ├── 04_datatypeComparison.js
+    ├── 05_Stack_and_heap.js
+    ├── 06_Strings.js
+    ├── 07_Number_and_Math.js
+    └── 08_Data_and_Time.js
 ```
 
 ---
 
 ## 🎯 Key Learning Objectives
 
-By the end of this deep dive, you'll understand:
+By working through this repository, you'll understand:
 
-✨ **How JavaScript actually executes code** — not just what it does, but why  
-✨ **Memory management** — how variables are created and stored  
-✨ **Asynchronous programming** — the event loop and how callbacks work  
+✨ **How JavaScript executes code** — execution contexts, phases, and timing  
+✨ **Memory management** — stack vs heap, variable allocation, and lifetime  
 ✨ **Scope and closures** — why variables are accessible in certain places  
-✨ **Prototypes and inheritance** — how objects and methods really work  
-✨ **Real-world patterns** — applying concepts to actual coding scenarios  
-
----
-
-## 💡 Philosophy
-
-This repository follows one core principle:
-
-> **"Don't just memorize how JavaScript works. Understand the 'why' so deeply that you can predict and debug any behavior."**
-
-Each concept includes:
-- **Visual diagrams** showing the "before and after"
-- **Step-by-step breakdowns** of what happens at each stage
-- **Real code examples** you can run and experiment with
-- **Common pitfalls** and how to avoid them
+✨ **The `this` keyword** — context binding and invocation patterns  
+✨ **Hoisting** — how declarations are processed before execution  
+✨ **Data types and operations** — primitives, objects, and conversions  
+✨ **Real-world applications** — practical patterns and best practices  
 
 ---
 
 ## 🚀 Quick Start
 
-1. **Start here**: Begin with [01-Fundamentals](./01-Fundamentals/) to understand execution context
-2. **Visual learner?** Look for flowcharts and diagrams in each file
-3. **Hands-on?** Run the examples in your browser console
-4. **Interview prep?** Check the [interview-questions.md](./Examples/interview-questions.md)
+### For Complete Beginners
+Start with the **JavaScript Programs** folder in this order:
+1. `01_variables.js` — Learn variable declaration
+2. `02_datatypes.js` — Understand data types
+3. `03_conversionOperation.js` — Type conversion basics
+4. Then move to **Core Concepts** folder
+
+### For Intermediate Learners
+Jump directly to **Core JavaScript Concepts** in order:
+1. `How_js_code_executed.js`
+2. `hoisting.js`
+3. `block_scoping_and_shadowing.js`
+4. `scoping_and_Lexical_Environment.js`
+5. `closures.js`
+
+### For Interview Preparation
+Review in this order:
+1. `How_js_code_executed.js`
+2. `hoisting.js`
+3. `closures.js`
+4. `Introduction_to_this.js`
+5. `05_Stack_and_heap.js`
+
+### How to Use the Files
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Open any JavaScript file in your browser console or Node.js
+node 01_variables.js
+
+# Or run in browser console:
+# Copy-paste code and run experiments
+```
 
 ---
 
-## 📈 How to Use This Repo
+## 💡 Learning Philosophy
 
-### For Beginners
-Follow the learning flow sequentially. Each concept builds on the previous one.
+This repository follows one core principle:
 
-### For Intermediate Developers
-Jump to specific topics you want to deepen. Use the index to navigate quickly.
+> **"Don't just memorize how JavaScript works. Understand the 'why' so deeply that you can predict and debug any behavior."**
 
-### For Interview Prep
-Review [Common Patterns & Questions](./Examples/interview-questions.md) and trace through examples mentally.
+Each concept file includes:
+- **Clear explanations** of the "why" behind the behavior
+- **Step-by-step examples** with console output
+- **Interactive demonstrations** you can modify and test
+- **Common gotchas** and how to avoid them
+- **Real-world use cases** where the concept matters
 
-### For Teaching Others
-Use the visual diagrams and explanations to teach these concepts clearly.
+---
+
+## 📖 How to Read This Repository
+
+### Option 1: Sequential Learning (Recommended for Beginners)
+Follow the files in order, understanding each concept before moving to the next.
+
+### Option 2: Concept-First (For Specific Topics)
+Jump to a specific concept file that interests you, then explore related files.
+
+### Option 3: Project-Based (For Practical Learners)
+Review the **JavaScript Programs** folder and understand how concepts apply to real code.
+
+### Option 4: Mixed Approach
+Combine programs with core concepts — do one program, then review the concept it uses.
+
+---
+
+## 🔗 Concept Dependencies
+
+```
+Execution Context
+    ├─→ Hoisting
+    ├─→ Scope & Lexical Environment
+    │   ├─→ Closures
+    │   ├─→ Block Scoping & Shadowing
+    │   └─→ Temporal Dead Zone
+    └─→ Function Invocation
+        └─→ The this Keyword
+```
+
+---
+
+## 💻 Running the Code
+
+### In Node.js
+```bash
+node 01_variables.js
+node closures.js
+```
+
+### In Browser Console
+1. Open DevTools (F12)
+2. Go to Console tab
+3. Copy-paste code from any file
+4. Run and experiment
+
+### In VS Code
+1. Install Code Runner extension
+2. Right-click on file
+3. Select "Run Code"
+4. View output in terminal
 
 ---
 
 ## 🤝 Contributing
 
-This is a personal learning journey, but your insights are welcome!
+This is a personal learning journey, but improvements are welcome!
 
-- Found an error or confusing explanation? Create an issue
-- Have a clearer way to explain a concept? Submit a pull request
-- Have an advanced topic suggestion? Let's discuss it
-
----
-
-## 📞 Questions & Discussion
-
-For questions or discussions about these concepts:
-
-- Open an [Issue](../../issues) for questions
-- Start a [Discussion](../../discussions) for deeper conversations
-- Reference specific sections when asking for clarification
+- **Found an error?** Report it as an issue
+- **Have clearer explanations?** Submit a pull request
+- **Want to add examples?** Create a discussion
 
 ---
 
-## ⭐ Support This Journey
+## 🌟 Support This Journey
 
-If this repository helps you understand JavaScript better, consider:
+If this repository helps you master JavaScript:
 
-- **Giving it a star** ⭐ — Your support keeps me motivated
-- **Sharing it** with others learning JavaScript
-- **Contributing improvements** to make it clearer for everyone
+- **Give it a ⭐ star** — Your support motivates continued learning
+- **Share it** with others learning JavaScript
+- **Bookmark it** for future reference
 
 ---
 
@@ -317,16 +355,16 @@ _"Writing code is easy. Understanding what happens behind the scenes — that's 
 
 <div align="center">
 
-### 🌟 Happy Learning! 🌟
+### 🌟 Ready to Master JavaScript? 🌟
 
-**Remember: Deep understanding beats quick memorization every time.**
+**Pick a file, run it, understand it, then modify it. That's how deep learning happens.**
 
 ```
-        ╔═══════════════════════╗
-        ║   KEEP EXPLORING      ║
-        ║   KEEP QUESTIONING    ║
-        ║   KEEP LEARNING       ║
-        ╚═══════════════════════╝
+╔════════════════════════════════════════╗
+║  START WITH: How_js_code_executed.js  ║
+║  THEN:       hoisting.js              ║
+║  THEN:       closures.js              ║
+╚════════════════════════════════════════╝
 ```
 
 [⬆ Back to Top](#-mastering-javascript--the-deep-dive-)
