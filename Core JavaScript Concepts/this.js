@@ -199,16 +199,37 @@ console.log(name2); // undefined undefined
 
 
 
-const obj1 = {
+// const obj1 = {
 
-    name : "Ali",
-    fun : () => {
-        console.log(this)
-    }
+//     name : "Ali",
+//     fun : () => {
+//         console.log(this) // this retains the enclosing lexical environment
+//     }
 
-}
+// }
 
 // now here this is not pointing towards the object but window object
+
+
+const outer = {
+
+    name : "ahmad",
+    
+    func : () => {
+        
+        const y = () => {
+            console.log(this)
+        }
+
+        y();
+    }
+    
+}
+
+console.log(outer.func()); 
+
+
+
 
 
 
