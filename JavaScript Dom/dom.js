@@ -27,14 +27,33 @@
 
 // Selection of an Element 
 
-const heading = document.querySelector("h1");
-console.log(heading);
+// const heading = document.querySelector("h1");
+// console.log(heading);
 
-heading.innerHTML = "Changed HTML"
-heading.style.color = "red"
+// heading.innerHTML = "Changed HTML"
+// heading.style.color = "red"
 
-// Event Listeners 
+// // Event Listeners 
 
-heading.addEventListener('click', function(){
-    alert("I am clicked!!!!")
-})
+// heading.addEventListener('click', function(){
+//     alert("I am clicked!!!!")
+// })
+
+// bulb button
+
+const but = document.getElementById("btn");
+const bulb = document.getElementById("bulb");
+
+but.addEventListener("click", () => {
+    
+    if(but.innerHTML === "off"){
+        but.innerHTML = "On"
+    }else{
+        but.innerHTML = "Off"
+        bulb.classList.toggle("off");
+    }
+
+});
+
+
+
