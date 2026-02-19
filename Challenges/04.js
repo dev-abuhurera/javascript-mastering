@@ -30,4 +30,30 @@ Your tasks:
 
 */
 
+let tip, bill, totalBill;
+
+
+bill = 275;
+
+if(bill >= 50 && bill <= 300){
+
+    tip =  (15 / 100) * bill;
+    
+    totalBill = tip + bill;
+
+    console.log("The bill was " + `${bill},` + " the tip was " + `${tip},` + " and the total value " + `${totalBill}`)
+
+}else{
+
+    tip = (20 / 100) * bill;
+
+    totalBill = tip + totalBill;
+
+
+    console.log("The bill was " + `${bill},` + " the tip was " + `${tip},` + " and the total value " + `${totalBill}`)
+
+}
+
+
+
 
