@@ -65,4 +65,6 @@ console.log(typeof newName); // function
 //-----------------------------------------------------
 
 
+// Value in Javascript
+
 
