@@ -43,3 +43,10 @@ console.log("This is my " + `${"birthday"}`) // ----> Js expect an expression in
 
 console.log(`${5 > 3 ? "This is the greater" : "This is not greater"}`)
 
+
+// Function expression
+
+const calAge = birthYear => 2037 - birthYear; // expression
+
+console.log(calAge(32));
+
