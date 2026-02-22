@@ -22,7 +22,7 @@ body{
 header{
     position: relative;
     height: 35vh;
-    border-bottom: 7px solid rgb(174, 174, 174);
+    border-bottom: 7px solid rgb(177 157 157 / 20%);
 }
 
 main{
@@ -83,16 +83,47 @@ h1{
     position: absolute;
     top: 2rem;
     left: 2rem;
+    background-color: #c9c6c6;
+    color: #929292;
+    padding: 2rem 0.5rem;
+    width: 10%;
+    font-size: 1rem;
+    font-family: inherit;
 }
 
 .guess{
     font-size: 4rem;
     width: 15rem;
-    padding: 2rem;
+    padding: 4rem 2rem;
     height: 10px;
+    text-align: center;
+    font-family: inherit;
+    margin-bottom: 2.5rem;
+    color: inherit;
+    background:none;
+    border-color: #bdb1b1;
 
 }
 
+.btncheck {
+  border: none;
+  background-color: #c9c6c6;
+  color: #929292;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 0.5rem;
+  cursor: pointer;
+}
 
+.btn:hover {
+  background-color: #ccc;
+}
 
+.message {
+  margin-bottom: 8rem;
+  height: 3rem;
+}
 
+.label-score {
+  margin-bottom: 2rem;
+}
