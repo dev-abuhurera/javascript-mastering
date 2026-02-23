@@ -48,3 +48,10 @@ document.querySelector('.btncheck').addEventListener('click', () => {
 
 });
 
+document.querySelector('.againBtn').addEventListener('click', () => {
+
+    console.log("ButtonClicked!!!");
+   
+    document.querySelector('.Score').innerText = 20; 
+    
+});
