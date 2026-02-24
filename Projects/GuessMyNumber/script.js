@@ -3,6 +3,8 @@
 // Generate secret number (1-20)
 const secret = Math.trunc(Math.random() * 20) + 1;
 
+let score = 20;
+
 // Keep it hidden!
 document.querySelector('.number').textContent = '?';
 
@@ -23,28 +25,27 @@ document.querySelector('.btncheck').addEventListener('click', () => {
         
         // Correct guess!
         document.querySelector('.message').textContent = '🎉 Correct Number!';
+
         document.querySelector('.number').textContent = secret;  // Reveal the number
         
     } else if (guess > secret) {
         // Too high
-        let number = Number(document.querySelector('.Score').innerText);
-
+        
         document.querySelector('.message').textContent = '📈 Too high!';
-        
-        number = number - 2;
 
-        document.querySelector('.Score').innerText = number;
+        score--;
         
-        
+        document.querySelector('.Score').innerText = score;
+    
+    
     } else if (guess < secret) {
 
-        let number = Number(document.querySelector('.Score').innerText);
-        // Too low
         document.querySelector('.message').textContent = '📉 Too low!';
 
-        number = number - 2;
-
-        document.querySelector('.Score').innerText = number;
+        score--;
+        
+        document.querySelector('.Score').innerText = score;
+    
     }
 
 });
