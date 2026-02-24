@@ -5,6 +5,10 @@ const secret = Math.trunc(Math.random() * 20) + 1;
 
 let score = 20;
 
+let highscore = 0;
+
+console.log(typeof document.querySelector('.label-highscore').innerText);
+
 // Keep it hidden!
 document.querySelector('.number').textContent = '?';
 
@@ -18,6 +22,7 @@ document.querySelector('.btncheck').addEventListener('click', () => {
 
     // Check different scenarios
     if (!guess) {
+
         // No input or 0
         document.querySelector('.message').textContent = '⛔ No number!';
         
@@ -27,23 +32,49 @@ document.querySelector('.btncheck').addEventListener('click', () => {
         document.querySelector('.message').textContent = '🎉 Correct Number!';
 
         document.querySelector('.number').textContent = secret;  // Reveal the number
-        
+
+        document.querySelector('body').style.backgroundColor = '#60b347';
+
+        if(score > highscore){
+            
+            highscore = score;
+            
+            document.querySelector('.highscore').innerText = highscore;
+
+        }
+
+
+
     } else if (guess > secret) {
         // Too high
         
         document.querySelector('.message').textContent = '📈 Too high!';
-
-        score--;
         
+        score--;
+
+        if(score <= -1){
+
+            document.querySelector('.message').textContent = '💥 Game Lost!';
+
+            return;
+        }
+
         document.querySelector('.Score').innerText = score;
-    
+
     
     } else if (guess < secret) {
 
         document.querySelector('.message').textContent = '📉 Too low!';
 
         score--;
-        
+
+        if(score <= -1){
+
+            document.querySelector('.message').textContent = '💥 Game Lost!';
+
+            return;
+        }
+
         document.querySelector('.Score').innerText = score;
     
     }
@@ -53,7 +84,19 @@ document.querySelector('.btncheck').addEventListener('click', () => {
 document.querySelector('.againBtn').addEventListener('click', () => {
 
     console.log("ButtonClicked!!!");
-   
-    document.querySelector('.Score').innerText = 20; 
+
+    let score = 20;
+
+    const secret = Math.trunc(Math.random() * 20) + 1;
+
+    document.querySelector('.message').textContent = 'Start guessing...';
+    document.querySelector('.Score').textContent = score;
+    document.querySelector('.number').textContent = '?';
+    document.querySelector('.guess').value = '';
+
+
+    document.querySelector('body').style.backgroundColor = '#222';
+
+    document.querySelector('.number').style.width = '15rem';
 
 });
