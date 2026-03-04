@@ -37,11 +37,9 @@ btnRoll.addEventListener('click', () => {
     if(playing){
         // 1. Generate a random dice roll
         const dice = Math.trunc(Math.random() * 6) + 1; // Value between 1 - 6
-
         // 2. Display dice
         diceEl.classList.remove('hidden');
         diceEl.src = `./images/dice-${dice}.png`;
-
         // 3. Check the rolled 1
         if(dice !== 1){ 
             //if not then add the dice to the current sore
