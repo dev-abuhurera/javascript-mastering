@@ -82,9 +82,19 @@ const displayMovement = function(movement){
         containerMovements.insertAdjacentHTML('afterbegin', html);
 
     });
-
-
-
 }
-
 displayMovement(account1.movements);
+
+// Reduce method to sum up all and then calculated the value and showed in the dom
+
+const calcDisplayBalance = function(movements){
+  const balance = movements.reduce((acc, mov) => {
+    return acc + mov;
+  }, 0);
+
+  labelBalance.textContent = `${balance} EUR`;
+};
+
+calcDisplayBalance(account1.movements);
+
+
