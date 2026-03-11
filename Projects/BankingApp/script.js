@@ -198,6 +198,19 @@ btnLogin.addEventListener('click', (e) =>{
 
 });
 
+
+// updateUI
+const updateUI = function(acc) {
+
+  // Display movements
+  displayMovement(acc.movements);
+  // Display Balance
+  calcDisplayBalance(acc.movements);
+  // Display Summary
+  calcDisplaySummary(acc);
+
+};
+
 // ----------------------------------------------------------------------------------------
 
 btnClose.addEventListener('click', (e) => {
@@ -228,3 +241,26 @@ btnClose.addEventListener('click', (e) => {
   inputCloseUsername.value = inputClosePin.value = '';
 
 });
+
+
+// Using the SOME method (ANY)
+
+btnLoan.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const amount = Number(inputLoanAmount.value);
+
+  if(amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)){
+    // Add movement
+    currentAccount.movements.push(amount);
+
+    // Update Ui
+    updateUI(currentAccount);
+  }
+
+  inputLoanAmount.value = '';
+
+})
+
+
+ 
