@@ -2,6 +2,8 @@
 
 // Account Data 
 
+// ----------------------------------------------------------------
+
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
@@ -30,7 +32,9 @@ const account4 = {
   pin: 4444,
 };
 
+const accounts = [account1, account2, account3, account4];
 
+// -----------------------------------------------------------------
 
 // Selecting all the Elements 
 
@@ -59,6 +63,7 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+// ---------------------------------------------------------------
 
 // Movement Logic
 
@@ -75,7 +80,7 @@ const displayMovement = function(movement){
             <div class="movements__type movements__type--${type}">
                 ${ind + 1} ${type}
             </div>
-            <div class="movements__value">${mov}</div>
+            <div class="movements__value">${mov} EUR</div>
         </div>
                 `
         
@@ -83,7 +88,9 @@ const displayMovement = function(movement){
 
     });
 }
-displayMovement(account1.movements);
+
+
+// --------------------------------------------------------------
 
 // Reduce method to sum up all and then calculated the value and showed in the dom
 
@@ -95,6 +102,104 @@ const calcDisplayBalance = function(movements){
   labelBalance.textContent = `${balance} EUR`;
 };
 
-calcDisplayBalance(account1.movements);
 
+
+// -----------------------------------------------------------------
+
+const calcDisplaySummary = function(acc){
+
+  const incomes = acc.movements.filter(mov => mov > 0).
+  reduce((acc, cur) => acc + cur);
+
+  labelSumIn.innerHTML = `${incomes} EUR`;
+  
+  const outInc = acc.movements.filter(mov => mov < 0).
+  reduce((acc, curr) => acc + curr);
+
+  labelSumOut.innerHTML = `${Math.abs(outInc)} EUR`;
+
+  const intr = acc.movements.filter(mov => mov > 0).
+  map(deposit => deposit * acc.interestRate/100)
+  .filter(int => int > 1)
+  .reduce((acc, int) => 
+  acc + int, 0);
+
+  labelSumInterest.innerHTML = `${intr} EUR`;
+
+}
+
+
+
+// -----------------------------------------------------------------
+
+// Computing the names of the username 
+
+// Now we want to add the username to each of our accounts 
+
+const createUsernames = function (accs) {
+  accs.forEach(acc => {
+    acc.username = acc.owner.toLowerCase().split(' ').map(word => word[0]).join('');
+  }); // we are not returning here just mutating the data // the side effect
+}
+
+createUsernames(accounts);
+
+console.log(accounts);
+
+// ----------------------------------------------------------------
+
+
+// Take all the deposits ---- Convert them into dollors ---- add all of them and then show it back later
+
+
+const euroToUsd = 1.1;
+
+//PIPELINE
+const accDep = account1.movements.filter(mov => mov > 0)
+.map(mov => mov * euroToUsd)
+.reduce((acc, curMov) => acc + curMov, 0);
+
+console.log(accDep);
+
+// -----------------------------------------------------------------
+
+// Event Handler
+
+let currentAccount;
+
+btnLogin.addEventListener('click', (e) =>{
+  // prevent the form from submiting
+  e.preventDefault()
+
+// Login
+ 
+  currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
+  console.log(currentAccount);
+
+  if(currentAccount?.pin === Number(inputLoginPin.value)){
+    //Display UI for the wrlcome message
+    labelWelcome.textContent = `Welcome back, ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    containerApp.style.opacity = 100;
+
+    //clearing user field
+    inputLoginUsername.value = inputLoginPin.value = '';
+    inputLoginPin.blur();
+  
+    // Display movements
+    displayMovement(currentAccount.movements)
+    // Display Balance
+    calcDisplayBalance(currentAccount.movements)
+    // Display Summary
+    calcDisplaySummary(currentAccount)
+  }
+
+  // if(currentAccount && currentAccount.pin === Number(inputLoginPin.value))
+  // if(currentAccount?.pin) // So pin will only be checked if the currentAccount exists
+
+
+});
+
+// ----------------------------------------------------------------------------------------
 
