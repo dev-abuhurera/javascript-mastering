@@ -89,7 +89,6 @@ const displayMovement = function(movement){
     });
 }
 
-
 // --------------------------------------------------------------
 
 // Reduce method to sum up all and then calculated the value and showed in the dom
@@ -101,7 +100,6 @@ const calcDisplayBalance = function(movements){
 
   labelBalance.textContent = `${balance} EUR`;
 };
-
 
 
 // -----------------------------------------------------------------
@@ -127,7 +125,6 @@ const calcDisplaySummary = function(acc){
   labelSumInterest.innerHTML = `${intr} EUR`;
 
 }
-
 
 
 // -----------------------------------------------------------------
@@ -203,3 +200,31 @@ btnLogin.addEventListener('click', (e) =>{
 
 // ----------------------------------------------------------------------------------------
 
+btnClose.addEventListener('click', (e) => {
+
+  e.preventDefault();
+  console.log("clicked")
+
+  if(
+    inputCloseUsername.value === currentAccount.username && Number  (inputClosePin.value) === currentAccount.pin
+  ){
+
+    const index = accounts.findIndex(
+      acc => acc.username === currentAccount.username
+    );
+
+    console.log(index);
+
+    //Delete account 
+    accounts.splice(index, 1);
+
+    // Hide ui
+    containerApp.style.opacity = 0;
+
+    console.log(accounts)
+  
+  }
+
+  inputCloseUsername.value = inputClosePin.value = '';
+
+});
