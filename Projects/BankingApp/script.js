@@ -67,12 +67,15 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 // Movement Logic
 
-const displayMovement = function(movement){
+const displayMovement = function(movement, sort = false){
 
-    containerMovements.innerHTML = '';
+  containerMovements.innerHTML = '';
 
-    movement.forEach((mov, ind) => {
+    // sort change the data in the array === mutate it!! so creating the copy by slice
+    const movs = sort ? movement.slice().sort((a, b) => a - b) : movement;
+    // Descending Order Sorting (a - b)
 
+    movs.forEach((mov, ind) => {
         const type = mov > 0 ? 'deposit' : 'withdrawal';
 
         const html = `
@@ -87,6 +90,8 @@ const displayMovement = function(movement){
         containerMovements.insertAdjacentHTML('afterbegin', html);
 
     });
+
+    
 }
 
 // --------------------------------------------------------------
@@ -262,5 +267,28 @@ btnLoan.addEventListener('click', (e) => {
 
 })
 
+// Sorting Values 
 
- 
+let sorted = false;
+
+btnSort.addEventListener('click', (e) => {  
+  e.preventDefault();
+
+
+  displayMovement(currentAccount.movements, !sorted);
+  sorted = !sorted;
+
+});
+
+// Array.from
+
+labelBalance.addEventListener('click', function() {
+  
+  const movementsUI = Array.from(document.querySelectorAll('.movements__value'))
+  
+  console.log(movementsUI);
+
+});
+
+
+
